@@ -13,6 +13,7 @@
         "errorhandler": "1.0.x",
         "response-time": "1.0.x",
         "sockjs":"0.3.x",
+        "rbytes": "1.0.x",
         "jade": "1.3.x"
     },
     "author": "Itai Koren (@itkoren)",
