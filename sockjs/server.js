@@ -26,14 +26,14 @@ sjss.on("connection", function(conn) {
     // Send data to the client
     conn.write(JSON.stringify({ connected: true }));
 
-    var id = setInterval(function() {
+    var interval = setInterval(function() {
         conn.write(JSON.stringify(process.memoryUsage()), function() { /* ignore errors */ });
     }, 100);
     console.log("started client interval");
 
     conn.on("close", function() {
         console.log("stopping client interval");
-        clearInterval(id);
+        clearInterval(interval);
     });
 });
 
